@@ -21,7 +21,7 @@ public class Knop_Paneel extends StackPane {
 		knop = new Button("Cirkel");
 		knop1 = new Button("Rechthoek");
 		knop2 = new Button("Vierkant");
-		knop3 = new Button("Driehoek");
+		knop3 = new Button("Ellipse");
 		start = new Button("Start");
 		
 		//------------------------------
