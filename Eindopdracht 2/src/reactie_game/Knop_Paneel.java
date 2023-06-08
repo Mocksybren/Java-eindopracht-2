@@ -14,7 +14,7 @@ public class Knop_Paneel extends StackPane {
 	
 	//------------------------------
 	public Knop_Paneel() {
-		Rectangle rechthoek = new Rectangle(800,50);
+		Rectangle rechthoek = new Rectangle(1000,50);
 		rechthoek.setFill(Color.PURPLE);
 		
 		//------------------------------

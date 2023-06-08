@@ -16,7 +16,7 @@ public class Header_Paneel extends StackPane{
 		Label header = new Label();
 		
 		//------------------------------
-		Rectangle rechthoek = new Rectangle(800,50);
+		Rectangle rechthoek = new Rectangle(1000,50);
 		rechthoek.setFill(Color.PURPLE);
 
 		//------------------------------

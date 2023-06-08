@@ -8,7 +8,7 @@ public class Ellipsse extends Ellipse {
 	private final double maxX, maxY;
 	private double dx, dy;
 
-	public Ellipsse(int x, int y, int straalx, int straaly, Color kleur, double maxX, double maxY) {
+	public Ellipsse(double x, double y, int straalx, int straaly, Color kleur, double maxX, double maxY) {
 		super(x, y, straalx, straaly);
 		this.straalx = straalx;
 		this.straaly = straaly;

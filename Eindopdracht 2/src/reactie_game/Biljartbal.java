@@ -8,7 +8,7 @@ public class Biljartbal extends Circle {
 	private final double maxX, maxY;
 	private double dx, dy;
 
-	public Biljartbal(int x, int y, int straal, Color kleur, double maxX, double maxY) {
+	public Biljartbal(double x, double y, int straal, Color kleur, double maxX, double maxY) {
 		super(x, y, straal);
 		this.straal = straal;
 		this.maxX = maxX;

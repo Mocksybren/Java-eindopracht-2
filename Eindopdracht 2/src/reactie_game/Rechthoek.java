@@ -6,9 +6,9 @@ import javafx.scene.paint.*;
 public class Rechthoek extends Rectangle {
 	private final double maxX, maxY;
 	private double dx, dy;
-	private int x,y;
+	private double x,y;
 
-	public Rechthoek(int x, int y,int w,int h, Color kleur, double maxX, double maxY) {
+	public Rechthoek(double x, double y,int w,int h, Color kleur, double maxX, double maxY) {
 		super(x, y,w,h);
 		this.x = x;
 		this.y = y;
