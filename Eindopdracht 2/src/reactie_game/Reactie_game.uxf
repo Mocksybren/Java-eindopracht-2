@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>0</y>
+      <w>330</w>
+      <h>860</h>
+    </coordinates>
+    <panel_attributes>reactie_game::Speelveld_Paneel
+--
+-scorePaneel: score_paneel
+-knop_paneel: Knop_Paneel
+~timelinestart = new Timeline(): Timeline
+-timeline: Timeline
+-keyframe: KeyFrame
+-timeline1: Timeline
+-keyframe1: KeyFrame
+-timeline2: Timeline
+-keyframe2: KeyFrame
+-timeline3: Timeline
+-keyframe3: KeyFrame
+-bal: Biljartbal
+-kant: Vierkant
+-recht: Rechthoek
+-elips: Ellipsse
+-speelveldh = 680: int
+-speelveldd = 800: int
+-x: double
+-y: double
+-isspelgestart = false: boolean
+~cirkelcheck: int
+~vierkantcheck: int
+~rechthoekcheck: int
+~eclipsecheck: int
+~cir = 0: int
+~vie = 0: int
+~rec = 0: int
+~ecl = 0: int
+~fout = 0: int
+~goed = 0: double
+~speluitleg = new Label(): Label
+--
++Speelveld_Paneel(): ctor
+~cirkel(): void
+~vierkant(): void
+~rechthoek(): void
+~eclipse(): void
+~randomwaarde(): void
+~start(): void
+~randomswitch(): void
+~reset(): void
++setspelstart(): void
+~cirkelklik(): void
+~vierkantklik(): void
+~rechthoekklik(): void
+~eclipseklik(): void
++setScorePaneel(score_paneel scorePaneel): void
++setKnopPaneel(Knop_Paneel knopPaneel): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>0</y>
+      <w>550</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes>reactie_game::Knop_Paneel
+--
+~knop: Button
+~knop1: Button
+~knop2: Button
+~knop3: Button
+~start: Button
+~herstart: Button
+--
++Knop_Paneel(): ctor
++schakelknoppenuit(): //methode voor andere methodes om knoppen uit te schakelen&#13;
+void
++schakelknoppenin(): //methode voor andere methodes om knoppen in te schakelen&#13;
+void
++setopstartactie(//actie koppeling&#13;
+EventHandler&lt;ActionEvent&gt; opstartknopactie): //actie koppeling&#13;
+void
++setopherstartactie(//actie koppeling&#13;
+EventHandler&lt;ActionEvent&gt; opherstartknopactie): //actie koppeling&#13;
+void
++cirkelklik(//actie koppeling&#13;
+EventHandler&lt;ActionEvent&gt; cirkelklik): //actie koppeling&#13;
+void
++vierkantklik(//actie koppeling&#13;
+EventHandler&lt;ActionEvent&gt; vierkantklik): //actie koppeling&#13;
+void
++rechthoekklik(//actie koppeling&#13;
+EventHandler&lt;ActionEvent&gt; rechthoekklik): //actie koppeling&#13;
+void
++eclipseklik(//actie koppeling&#13;
+EventHandler&lt;ActionEvent&gt; eclipseklik): //actie koppeling&#13;
+void
++schakelCirkelknopuit(//actie koppeling&#13;
+boolean isDisabled): //actie koppeling&#13;
+void
++schakelVierkantknopuit(boolean isDisabled): void
++schakelRechthoekknopuit(boolean isDisabled): void
++schakelEllipseknopuit(boolean isDisabled): void
++schakelstartknopuit(boolean isDisabled): void
++schakelherstartknopuit(boolean isDisabled): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>0</y>
+      <w>410</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>reactie_game::Hoofd_Bestand
+--
+-speelveld: Speelveld_Paneel
+~knop_Paneel = new Knop_Paneel(): Knop_Paneel
+--
++start(Stage primaryStage): void
+-initLayout(VBox VBox): void
+-inittussenpaneel(Pane pane): void
+-initheaderpaneel(VBox VBox): void
+-initspeelveldpaneel(Pane Pane): void
+-initknoppaneel(VBox VBox): void
++opstartknopactie(): // start actie opzetten voor start knop&#13;
+EventHandler&lt;ActionEvent&gt;
++opherstartknopactie(): // start actie opzetten voor herstart knop&#13;
+EventHandler&lt;ActionEvent&gt;
++cirkelklik(): // start actie opzetten cirkelklik&#13;
+EventHandler&lt;ActionEvent&gt;
++vierkantklik(): // start actie opzetten voor vierkantklik&#13;
+EventHandler&lt;ActionEvent&gt;
++rechthoekklik(): // start actie opzetten voor rechhoekklik&#13;
+EventHandler&lt;ActionEvent&gt;
++eclipseklik(): // start actie opzetten voor eclipseklik&#13;
+EventHandler&lt;ActionEvent&gt;
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1330</x>
+      <y>0</y>
+      <w>410</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>reactie_game::score_paneel
+--
+~scoreg = new Label(): Label
+~scoref = new Label(): Label
+~timeline1 = new Label(): Label
+~timeline2 = new Label(): Label
+~timeline3 = new Label(): Label
+~timeline4 = new Label(): Label
+~decimalFormat = new DecimalFormat("#.##"): DecimalFormat
+--
++score_paneel(): ctor
++updateTimeline1(long seconde, long miliseconde): void
++updateTimeline2(long seconde, long miliseconde): void
++updateTimeline3(long seconde, long miliseconde): void
++updateTimeline4(long seconde, long miliseconde): void
++scoref_update(int score): void
++scoreg_update(double score): void
++getTimeline1(): String
++getTimeline2(): String
++getTimeline3(): String
++getTimeline4(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>870</y>
+      <w>550</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>reactie_game::Biljartbal
+--
+-straal: int
+-maxX, maxY: double
+-dx, dy: double
+--
++Biljartbal(double x, double y, int straal, Color kleur, double maxX, double maxY): ctor
++verplaats(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>870</y>
+      <w>620</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>reactie_game::Ellipsse
+--
+-straalx, straaly: int
+-maxX, maxY: double
+-dx, dy: double
+--
++Ellipsse(double x, double y, int straalx, int straaly, Color kleur, double maxX, double maxY): ctor
++verplaats(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1200</x>
+      <y>870</y>
+      <w>570</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>reactie_game::Rechthoek
+--
+-maxX, maxY: double
+-dx, dy: double
+-x, y: double
+--
++Rechthoek(double x, double y, int w, int h, Color kleur, double maxX, double maxY): ctor
++verplaats(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1780</x>
+      <y>870</y>
+      <w>560</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>reactie_game::Vierkant
+--
+-maxX, maxY: double
+-dx, dy: double
+-x, y: double
+--
++Vierkant(double x, double y, int w, int h, Color kleur, double maxX, double maxY): ctor
++verplaats(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>1020</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>reactie_game::Header_Paneel
+--
+--
++Header_Paneel(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>1020</y>
+      <w>330</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>reactie_game::Tussen_Paneel
+--
+--
++Tussen_Paneel(double width, double height): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
