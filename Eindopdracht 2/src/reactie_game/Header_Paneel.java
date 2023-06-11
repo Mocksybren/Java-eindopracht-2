@@ -11,8 +11,6 @@ public class Header_Paneel extends StackPane{
 
 	public Header_Paneel() {
 		//maak titel van de game duidelijk
-		Label scoreg = new Label();
-		Label scoref = new Label();
 		Label header = new Label();
 		
 		//------------------------------
@@ -25,19 +23,7 @@ public class Header_Paneel extends StackPane{
 		header.setTextFill(Color.WHITE);
 
 		//------------------------------
-		scoreg.setText("SCORE: ");
-		scoreg.setTextFill(Color.WHITE);
-		scoreg.setFont(Font.font("Arial",26));
-		scoreg.setTranslateX(225);
-		
-		//------------------------------
-		scoref.setText("FOUTEN: ");
-		scoref.setTextFill(Color.WHITE);
-		scoref.setFont(Font.font("Arial",26));
-		scoref.setTranslateX(-325);
-		
-		//------------------------------
-		this.getChildren().addAll(rechthoek,header,scoreg,scoref);
+		this.getChildren().addAll(rechthoek,header);
 
 	}
 }
