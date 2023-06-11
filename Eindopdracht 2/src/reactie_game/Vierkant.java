@@ -6,10 +6,10 @@ import javafx.scene.paint.*;
 public class Vierkant extends Rectangle {
 	private final double maxX, maxY;
 	private double dx, dy;
-	private double x,y;
+	private double x, y;
 
-	public Vierkant(double x, double y,int w,int h, Color kleur, double maxX, double maxY) {
-		super(x, y,w,h);
+	public Vierkant(double x, double y, int w, int h, Color kleur, double maxX, double maxY) {
+		super(x, y, w, h);
 		this.x = x;
 		this.y = y;
 		this.maxX = maxX;
@@ -20,26 +20,26 @@ public class Vierkant extends Rectangle {
 	}
 
 	public void verplaats() {
-	    double xuit = x + dx;
-	    double yuit = y + dy;
+		double xuit = x + dx;
+		double yuit = y + dy;
 
-	    //Controleer of de rechthoek de linker- of rechtergrens raakt
-	    if (xuit < 0 || xuit + getWidth() > maxX) {
-	        dx = -dx;
-	    }
+		// Controleer of de rechthoek de linker- of rechtergrens raakt
+		if (xuit < 0 || xuit + getWidth() > maxX) {
+			dx = -dx;
+		}
 
-	    //Controleer of de rechthoek de boven- of ondergrens raakt
-	    if (yuit < 0 || yuit + getHeight() > maxY) {
-	        dy = -dy;
-	    }
+		// Controleer of de rechthoek de boven- of ondergrens raakt
+		if (yuit < 0 || yuit + getHeight() > maxY) {
+			dy = -dy;
+		}
 
-	    //Werk de positie van de rechthoek bij
-	    x += dx;
-	    y += dy;
+		// Werk de positie van de rechthoek bij
+		x += dx;
+		y += dy;
 
-	    //Verplaats de rechthoek naar de nieuwe positie
-	    setX(x);
-	    setY(y);
+		// Verplaats de rechthoek naar de nieuwe positie
+		setX(x);
+		setY(y);
 	}
 
 }
