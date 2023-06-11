@@ -4,7 +4,7 @@ import javafx.scene.shape.Ellipse;
 import javafx.scene.paint.*;
 
 public class Ellipsse extends Ellipse {
-	private final int straalx,straaly;
+	private final int straalx, straaly;
 	private final double maxX, maxY;
 	private double dx, dy;
 
