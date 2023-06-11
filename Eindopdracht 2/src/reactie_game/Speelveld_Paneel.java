@@ -221,7 +221,7 @@ public class Speelveld_Paneel extends Pane {
 			timelinestart.setCycleCount(Timeline.INDEFINITE);
 			timelinestart.play();
 			isspelgestart = true;
-		} else if (cir == 1 && vie == 1 && rec == 1 && ecl == 1) {
+		} else if (cir == 10 && vie == 10 && rec == 10 && ecl == 10) {
 			reset();
 			isspelgestart = false;
 			timelinestart.stop();
